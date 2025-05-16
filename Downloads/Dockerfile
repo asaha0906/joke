@@ -4,5 +4,4 @@ WORKDIR /app
 
 COPY . .
 
-
 CMD ["python", "j.py"]
