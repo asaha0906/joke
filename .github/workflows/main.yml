@@ -23,7 +23,7 @@ jobs:
       run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/joke_app:latest
+      run: docker build . --file Downloads/Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/joke_app:latest
 
     - name: Push Docker images to Docker Hub
       run: |
